@@ -1,0 +1,89 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Bluechips",
+      "desc": "Default top 30 PSEi Companies"
+    }
+  ],
+  "list": [
+    {
+      "category": 1,
+      "securitySymbol": "ALI",
+      "companyId": "180",
+      "securitySymbolId": "293"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "AP",
+      "companyId": "609",
+      "securitySymbolId": "532"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "BDO",
+      "companyId": "260",
+      "securitySymbolId": "468"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "BPI",
+      "companyId": "234",
+      "securitySymbolId": "101"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "CNPF",
+      "companyId": "652",
+      "securitySymbolId": "597"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "DMC",
+      "companyId": "188",
+      "securitySymbolId": "192"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "DNL",
+      "companyId": "639",
+      "securitySymbolId": "582"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "FGEN",
+      "companyId": "600",
+      "securitySymbolId": "521"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "JFC",
+      "companyId": "86",
+      "securitySymbolId": "158"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "PCOR",
+      "companyId": "136",
+      "securitySymbolId": "139"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "PGOLD",
+      "companyId": "629",
+      "securitySymbolId": "567"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "SCC",
+      "companyId": "157",
+      "securitySymbolId": "396"
+    },
+    {
+      "category": 1,
+      "securitySymbol": "URC",
+      "companyId": "124",
+      "securitySymbolId": "167"
+    }
+  ]
+}
