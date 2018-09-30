@@ -35,10 +35,10 @@ class BrowseRequest {
 		return this.browser.close();
 	}
 
-	requestPost (child_url, postvars, as_json=!1) {
-		this.requests++;
-		return this.page.evaluate(function(url,pvars,asjson) {
-			var params = {method: 'POST'};
+	requestPost (child_url, postvars, as_json=!1, method="POST") {
+		// this.requests++;
+		return this.page.evaluate(function(url,pvars,asjson,method) {
+			var params = { method };
 			if (pvars != null) {
 				var f = new FormData();
 				for (var p in pvars) {
@@ -47,13 +47,13 @@ class BrowseRequest {
 				params['body'] = f;
 			}
 			return fetch(url, params).then(r => {
-				--this.requests;
+				//--this.requests;
 				return asjson ? r.json() : r.text();
 			});
-		},this.domainurl+child_url,postvars,as_json)
+		},this.domainurl+child_url,postvars,as_json,method)
 		.catch(e => {
 			console.log(e);
-			--this.requests;
+			// --this.requests;
 			return e;
 		});
 	}

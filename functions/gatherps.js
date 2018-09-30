@@ -5,7 +5,7 @@ class Gatherer {
 		this.est = !1;
 		this.lasthistdata = {};
 		this.lastinfdata = {};
-		this.mainurl = 'http://www.pse.com.ph/stockMarket/';
+		this.mainurl = 'https://www.pse.com.ph/stockMarket/';
 		this.browser = new BrowseRequest(this.mainurl, 'home.html');
 	}
 	establish(){
@@ -13,7 +13,7 @@ class Gatherer {
 	}
 	get_ticker() {
 		return this.establish().then(r => 
-			r.requestPost('home.html?method=getSecuritiesAndIndicesForPublic&ajax=true',null,!0))
+			r.requestPost('home.html?method=getSecuritiesAndIndicesForPublic&ajax=true',null,!0,"GET"))
 			.then(function(ti){
 				this.ticker = ti;
 				return ti;
@@ -21,7 +21,7 @@ class Gatherer {
 	}
 	get_pse_list() {
 		return this.establish().then(r => 
-			r.requestPost('companyInfoSecurityProfile.html?method=getListedRecords&common=yes&ajax=true',null,!0))
+			r.requestPost('companyInfoSecurityProfile.html?method=getListedRecords&common=yes&ajax=true',null,!0,"GET"))
 			.then(function(ti){
 				this.pselist = ti;
 				return ti;

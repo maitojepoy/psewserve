@@ -32,26 +32,30 @@ class Executor extends PSEWCore{
 				this._stockDataInit(),
 				this._infoInit(),
 				this.calculateDayDifference()
-			]).then(() => this._metasInit())
-			.then(() => this._detailsInit());
-		});
+			]);
+		})
+		.then(() => this._metasInit())
+		.then(() => this._detailsInit());
 	}
 
 	load() {
-		return this._preload().then(function(){
+		console.log('beginning load.');
+		return this._preload().then(() => {
 			if (!this.justcreated){
+				console.log('beginning preloads.');
 				return this._datapreload()
-					.then(function(){
+					.then(() => {
+						console.log('preload stuffs done');
 						if (this.daydiffs.length > 0) 
 							return this._execute();
 						else
 							return true;
-					}.bind(this));
+					});
 			} else {
-				this._kickgunner();
+				//this._kickgunner();
 				return true;
 			}
-		}.bind(this));
+		});
 	}
 
 	_kickgunner() {

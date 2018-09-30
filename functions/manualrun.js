@@ -7,8 +7,8 @@ const executeIt = () => {
 	var fburl = 'https://psew-a6c11.firebaseio.com';
 	var fbserveacc = require('./accntkey.json');
 	var _x = new Executor({ url:fburl,key:fbserveacc }, _cron);
-	//_x.load();
-	return _x._datapreload().then(() => _x.writeLast5ToInfo());
+	return _x.load();
+	// return _x._datapreload().then(() => _x.writeLast5ToInfo());
 }
 
 executeIt();
